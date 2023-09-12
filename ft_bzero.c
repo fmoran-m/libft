@@ -1,10 +1,10 @@
-#include <string.h>
-#include <stdio.h>
+//#include <string.h>
+//#include <stdio.h>
 
 void ft_bzero(void *s, size_t n)
 {
 	size_t	i;
-	char *str;
+	unsigned char *str;
 	
 	str = s;
 	i = 0;
@@ -14,7 +14,7 @@ void ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-
+/*
 int main (void)
 {
 	char s[4] = "hola";
@@ -22,3 +22,4 @@ int main (void)
 	printf("%s\n", s);
 	return (0);
 }
+*/
