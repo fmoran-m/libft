@@ -1,32 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmoran-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/11 18:42:26 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/12 13:00:07 by fmoran-m         ###   ########.fr       */
+/*   Created: 2023/09/12 16:29:51 by fmoran-m          #+#    #+#             */
+/*   Updated: 2023/09/12 16:30:37 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
 //#include <ctype.h>
+//#include <stdio.h>
 
-int	ft_isalpha(int c)
+int	ft_isascii(int c)
 {
-	if (c >= 65 && c <= 122)
+	if (c >= 0 && c <= 127)
 		return (1);
 	else
 		return (0);
 }
+
 /*
-int main(void)
+int main (void)
 {
-	int a = ft_isalpha('a');
-	int b = isalpha('a');
-	printf("%d", a);
-	printf("%d", b);
+	int a = ft_isascii(0);
+	int b = isascii(0);
+	int c = ft_isascii(127);
+	int d = isascii(127);	
+	printf("%d\n", a);
+	printf("%d\n", b);
+	printf("%d\n",a);
+	printf("%d\n", a);
 	return (0);
 }
 */

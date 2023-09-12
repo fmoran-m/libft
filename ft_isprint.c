@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmoran-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/11 18:42:26 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/12 13:00:07 by fmoran-m         ###   ########.fr       */
+/*   Created: 2023/09/12 16:45:30 by fmoran-m          #+#    #+#             */
+/*   Updated: 2023/09/12 16:56:24 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
 //#include <ctype.h>
+//#include <stdio.h>
 
-int	ft_isalpha(int c)
+int	ft_isprint(int c)
 {
-	if (c >= 65 && c <= 122)
+	if (c >= 32 && c <= 126)
 		return (1);
 	else
 		return (0);
 }
 /*
-int main(void)
+int main (void)
 {
-	int a = ft_isalpha('a');
-	int b = isalpha('a');
-	printf("%d", a);
-	printf("%d", b);
+	int a = ft_isprint(1);
+	int b = isprint(1);
+	printf("%d\n", a);
+	printf("%d\n", b);
 	return (0);
 }
 */
