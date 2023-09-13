@@ -1,37 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmoran-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 13:44:02 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/13 13:45:12 by fmoran-m         ###   ########.fr       */
+/*   Created: 2023/09/13 13:41:54 by fmoran-m          #+#    #+#             */
+/*   Updated: 2023/09/13 13:43:25 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <string.h>
 //#include <stdio.h>
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
 	size_t			i;
-	unsigned char	*str;
+	unsigned char	*destiny;
+	const char		*source;
 
-	str = s;
+	destiny = dst;
+	source = src;
 	i = 0;
 	while (i < n)
 	{
-		str[i] = 0;
+		destiny[i] = source[i];
 		i++;
 	}
+	return (destiny);
 }
 /*
 int main (void)
 {
-	char s[4] = "hola";
-	ft_bzero(s, 4);
-	printf("%s\n", s);
-	return (0);
+	char a[4] = "hola";
+	char b[4] = "aaaa";
+	char *c = ft_memcpy(a, b, 4);
+	char *d = memcpy(a, b, 4);
+	printf("%s\n", c);
+	printf("%s\n", d);
+	return(0);
 }
 */
