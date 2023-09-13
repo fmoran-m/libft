@@ -1,39 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmoran-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 17:28:30 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/13 19:13:37 by fmoran-m         ###   ########.fr       */
+/*   Created: 2023/09/13 19:14:17 by fmoran-m          #+#    #+#             */
+/*   Updated: 2023/09/13 19:15:05 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
 
-void	*ft_memset(void *b, int c, size_t len)
+char	*ft_strchr(const char *s, int c)
 {
-	unsigned char	*str;
-	unsigned char	word;
-	size_t			i;
-
-	word = c;
-	str = b;
-	i = 0;
-	while (i < len)
-	{
-		str[i] = c;
-		i++;
-	}
-	return (b);
+	while (*s != c && *s != '\0')
+		s++;
+	if (*s == '\0')
+		return (0);
+	else
+		return ((char *)s);
 }
 /*
-int main (void)
+int main(void)
 {
-	char b[4] = "hola";
-	ft_memset(b, 'a', 2);
+	char *s = "Hola"; 
+	char *b = ft_strchr(s, 'z');
 	printf("%s\n", b);
 	return (0);
 }
