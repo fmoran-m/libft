@@ -27,7 +27,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		destiny[i] = source[i];
 		i++;
 	}
-	return (destiny);
+	return (dst);
 }
 /*
 int main (void)
