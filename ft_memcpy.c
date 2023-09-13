@@ -6,18 +6,18 @@
 /*   By: fmoran-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 13:41:54 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/13 13:43:25 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/09/13 14:14:18 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <string.h>
 //#include <stdio.h>
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t			i;
-	unsigned char	*destiny;
-	const char		*source;
+	size_t					i;
+	unsigned char			*destiny;
+	const unsigned char		*source;
 
 	destiny = dst;
 	source = src;
