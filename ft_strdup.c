@@ -1,40 +1,54 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmoran-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/14 13:56:55 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/14 18:19:05 by fmoran-m         ###   ########.fr       */
+/*   Created: 2023/09/14 21:17:18 by fmoran-m          #+#    #+#             */
+/*   Updated: 2023/09/14 21:19:11 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <string.h>
 //#include <stdio.h>
+//#include <stdlib.h>
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+size_t	ft_strlen(const char *s)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
-	while (*s1 == *s2 && i < n && *s1 != '\0' && *s2 != '\0')
+	while (s[i])
+		i++;
+	return (i);
+}
+
+char	*ft_strdup(const char *s1)
+{
+	size_t	len;
+	size_t	i;
+	char	*ptr;
+
+	len = strlen(s1);
+	ptr = (char *) malloc(len * (sizeof(char)) + 1);
+	if (ptr == 0)
+		return (0);
+	i = 0;
+	while (s1[i])
 	{
-		s1++;
-		s2++;
+		ptr[i] = s1[i];
 		i++;
 	}
-	return ((unsigned int) *s1 - (unsigned int)*s2);
+	ptr[i] = '\0';
+	return (ptr);
 }
 /*
-int main(void)
+int main (void)
 {
-	char *a = "aaaaad";
-	char *b = "aaaaaz";
-	int c = ft_strncmp(a, b, 10);
-	int d = strncmp(a, b, 10);
-	printf("%d\n", c);
-	printf("%d\n", d);
-	return 0;
-}
+	char *a = "HoladsfasdfLKJASDFJa";
+	char *z = ft_strdup(a);
+	printf("%s\n", z);
+	return (0);
+}	
 */

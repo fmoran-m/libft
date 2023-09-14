@@ -1,40 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmoran-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/14 13:56:55 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/14 18:19:05 by fmoran-m         ###   ########.fr       */
+/*   Created: 2023/09/14 18:55:12 by fmoran-m          #+#    #+#             */
+/*   Updated: 2023/09/14 18:57:56 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <string.h>
 //#include <stdio.h>
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
+	const char	*str1;
+	const char	*str2;
+	size_t		i;
 
+	str1 = s1;
+	str2 = s2;
 	i = 0;
-	while (*s1 == *s2 && i < n && *s1 != '\0' && *s2 != '\0')
+	while (*str1 == *str2 && i < n && *str1 != '\0' && *str2 != '\0')
 	{
-		s1++;
-		s2++;
+		str1++;
+		str2++;
 		i++;
 	}
-	return ((unsigned int) *s1 - (unsigned int)*s2);
+	return ((unsigned int)*str1 - (unsigned int)*str2);
 }
 /*
 int main(void)
 {
-	char *a = "aaaaad";
-	char *b = "aaaaaz";
-	int c = ft_strncmp(a, b, 10);
-	int d = strncmp(a, b, 10);
+	char *a = "ada";
+	char *b = "ad7";
+	int c = ft_memcmp (a, b, 10);
+	int d =	memcmp(a, b, 10);
 	printf("%d\n", c);
 	printf("%d\n", d);
 	return 0;
-}
+}	
 */
