@@ -1,38 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmoran-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/13 19:22:32 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/14 13:23:21 by fmoran-m         ###   ########.fr       */
+/*   Created: 2023/09/14 13:56:55 by fmoran-m          #+#    #+#             */
+/*   Updated: 2023/09/14 14:00:46 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <string.h>
 //#include <stdio.h>
 
-char	*ft_strrchr(const char *s, int c)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	char	first;
+	size_t	i;
 
-	first = *s;
-	while (*s != '\0')
-		s++;
-	while (*s != first && *s != c)
-		s--;
-	if (*s == first && *s != c)
-		return (0);
-	else
-		return ((char *)s);
+	i = 0;
+	while (*s1 == *s2 && i < n && *s1 != '\0' && *s2 != '\0')
+	{
+		s1++;
+		s2++;
+		i++;
+	}
+	return ((unsigned int) *s1 - (unsigned int)*s2);
 }
 /*
 int main(void)
 {
-	char *s = "Hola";
-	char *a = ft_strrchr(s, 'H');
-	printf("%s\n", a);
-	return (0);
+	char *a = "aaaaad";
+	char *b = "aaaaaz";
+	int c = ft_strncmp(a, b, 10);
+	int d = strncmp(a, b, 10);
+	printf("%d\n", c);
+	printf("%d\n", d);
+	return 0;
 }
 */
