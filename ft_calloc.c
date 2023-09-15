@@ -1,54 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmoran-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/14 21:17:18 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/15 12:07:14 by fmoran-m         ###   ########.fr       */
+/*   Created: 2023/09/15 12:36:30 by fmoran-m          #+#    #+#             */
+/*   Updated: 2023/09/15 12:37:25 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <string.h>
-//#include <stdio.h>
 //#include <stdlib.h>
+//#include <stdio.h>
 
-size_t	ft_strlen(const char *s)
+void	*ft_calloc(size_t count, size_t size)
 {
-	int	i;
+	char	*ptr;
+	size_t	i;
+	size_t	total_amount;
 
 	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
-
-char	*ft_strdup(const char *s1)
-{
-	size_t	len;
-	size_t	i;
-	char	*ptr;
-
-	len = strlen(s1);
-	ptr = (char *) malloc(len * (sizeof(char)) + 1);
+	total_amount = size * count;
+	ptr = malloc(size * count);
 	if (ptr == 0)
 		return (0);
-	i = 0;
-	while (s1[i])
+	while (i < total_amount)
 	{
-		ptr[i] = s1[i];
+		ptr[i] = 0;
 		i++;
 	}
-	ptr[i] = '\0';
 	return (ptr);
 }
 /*
 int main (void)
 {
-	char *a = "HoladsfasdfLKJASDFJa";
-	char *z = ft_strdup(a);
-	printf("%s\n", z);
-	return (0);
-}	
+	char *a = ft_calloc(4, 4);
+	printf("%s\n", a);
+	return 0;
+}
 */
