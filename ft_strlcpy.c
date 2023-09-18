@@ -1,6 +1,6 @@
-//#include <stdio.h>
-//#include <stdlib.h>
-//#include <strings.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 size_t	ft_strlen(const char *s)
 {
@@ -29,13 +29,13 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	dst[i] = '\0';
 	return (srclen);
 }
-/*
+
 int main (void)
 {
-	char dst[5] = "";
+	char dst[10] = "";
 	char *src = "Holaaaaaaa";
 	size_t a = ft_strlcpy(dst, src, 7);
 	printf("Size is %ld, string is'%s'\n", a, dst);
 	return 0;
 }
-*/
+
