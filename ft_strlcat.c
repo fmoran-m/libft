@@ -1,6 +1,17 @@
-#include <string.h>
-#include <stdio.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fmoran-m <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/18 13:13:24 by fmoran-m          #+#    #+#             */
+/*   Updated: 2023/09/18 13:15:34 by fmoran-m         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+//#include <string.h>
+//#include <stdio.h>
 
 size_t	ft_strlen(const char *s)
 {
@@ -12,30 +23,38 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-size_t ft_strlcat (char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t i;
-	size_t k;
+	size_t	i;
+	size_t	k;
+	size_t	srclen;
+	size_t	dstlen;
 
 	i = 0;
 	k = 0;
+	srclen = ft_strlen(src);
 	while (dst[i])
 		i++;
-	while (k < (dstsize - ft_strlen(dst) - 1))
+	dstlen = i;
+	while (src[i] && k < (dstsize - dstlen - 1))
 	{
-		dst[i] = src[k];	
+		dst[i] = src[k];
 		i++;
 		k++;
 	}
 	dst[i] = '\0';
-	return (strlen(src) + strlen(dst));
+	if (dstsize < srclen)
+		return (srclen + dstsize);
+	else
+		return (srclen + dstlen);
 }
-
+/*
 int main (void)
 {
-	char *a = "Hola";
-	char *b = "Adios";
-	size_t n = ft_strlcat(a, b, 10);
+	char a[20] = "Ho";
+	char b[30] = "Adios";
+	size_t n = strlcat(a, b, 20);
 	printf("Return is %zu and string is %s\n", n, b);
 	return 0;
 }
+*/

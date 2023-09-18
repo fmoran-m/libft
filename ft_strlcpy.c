@@ -1,6 +1,18 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fmoran-m <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/18 13:22:35 by fmoran-m          #+#    #+#             */
+/*   Updated: 2023/09/18 13:23:58 by fmoran-m         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <string.h>
 
 size_t	ft_strlen(const char *s)
 {
@@ -29,7 +41,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	dst[i] = '\0';
 	return (srclen);
 }
-
+/*
 int main (void)
 {
 	char dst[10] = "";
@@ -38,4 +50,4 @@ int main (void)
 	printf("Size is %ld, string is'%s'\n", a, dst);
 	return 0;
 }
-
+*/
