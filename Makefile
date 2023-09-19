@@ -4,7 +4,7 @@ FLAGS := -Wall -Wextra -Werror
 
 RM = rm -f
 
-SRC = ft_isalpha.c ft_isdigit.c
+SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii ft_isprint ft_strlen 
 
 OBJS = ${SRC:.c=.o}
 
