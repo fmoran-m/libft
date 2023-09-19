@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fmoran-m <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 13:56:55 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/14 18:19:05 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/09/19 19:20:32 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 //#include <string.h>
 //#include <stdio.h>
 
@@ -18,18 +19,18 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	size_t	i;
 
 	i = 0;
-	while (*s1 == *s2 && i < n && *s1 != '\0' && *s2 != '\0')
+	while ((s1[i] || s2[i]) && i < n)
 	{
-		s1++;
-		s2++;
+		if (s1[i] != s2[i])
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 		i++;
 	}
-	return ((unsigned int) *s1 - (unsigned int)*s2);
+	return(0);
 }
 /*
 int main(void)
 {
-	char *a = "aaaaad";
+	char *a = "amcasldffj";
 	char *b = "aaaaaz";
 	int c = ft_strncmp(a, b, 10);
 	int d = strncmp(a, b, 10);

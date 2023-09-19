@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fmoran-m <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 16:42:05 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/18 16:48:09 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/09/19 18:40:57 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdlib.h>
+#include "libft.h"
 //#include <stdio.h>
 
 char	*pointer(char const *s, unsigned int start)
