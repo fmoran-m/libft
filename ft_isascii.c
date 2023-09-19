@@ -6,11 +6,10 @@
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 16:29:51 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/19 18:40:10 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/09/19 20:35:26 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 //#include <ctype.h>
 //#include <stdio.h>
 

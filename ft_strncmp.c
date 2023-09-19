@@ -6,7 +6,7 @@
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 13:56:55 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/19 19:20:32 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/09/19 20:17:08 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 		i++;
 	}
-	return(0);
+	return (0);
 }
 /*
 int main(void)
