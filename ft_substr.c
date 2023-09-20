@@ -6,12 +6,11 @@
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 16:42:05 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/19 18:40:57 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/09/20 21:09:25 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
 
 char	*pointer(char const *s, unsigned int start)
 {
@@ -50,12 +49,4 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	new[i] = '\0';
 	return (new);
 }
-/*
-int main (void)
-{
-	char a[20] = "Hola";
-	char *b = ft_substr(a, 0, 6);
-	printf("%s\n", b);
-	return 0;
-}
-*/
+

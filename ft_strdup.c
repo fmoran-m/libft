@@ -6,13 +6,11 @@
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 21:17:18 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/19 18:42:31 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/09/20 21:09:02 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <string.h>
-//#include <stdio.h>
 
 char	*ft_strdup(const char *s1)
 {
@@ -33,12 +31,3 @@ char	*ft_strdup(const char *s1)
 	ptr[i] = '\0';
 	return (ptr);
 }
-/*
-int main (void)
-{
-	char *a = "HoladsfasdfLKJASDFJa";
-	char *z = ft_strdup(a);
-	printf("%s\n", z);
-	return (0);
-}	
-*/

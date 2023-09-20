@@ -8,7 +8,7 @@ SRC =	ft_isalpha.c ft_isascii.c ft_isalnum.c ft_isdigit.c ft_isprint.c ft_strlen
 
 OBJS = ${SRC:.c=.o}
 
-all:	$(NAME)
+all:	$(NAME) 
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
@@ -21,3 +21,5 @@ clean:
 
 fclean:	clean
 		rm -f $(NAME)
+
+re: fclean all

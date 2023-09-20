@@ -6,13 +6,11 @@
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 18:42:26 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/19 18:40:08 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/09/20 20:25:14 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
-//#include <ctype.h>
 
 int	ft_isalpha(int c)
 {
@@ -21,13 +19,4 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
-/*
-int main(void)
-{
-	int a = ft_isalpha('a');
-	int b = isalpha('a');
-	printf("%d\n", a);
-	printf("%d\n", b);
-	return (0);
-}
-*/
+

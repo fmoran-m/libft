@@ -6,13 +6,11 @@
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 15:39:36 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/19 18:39:39 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/09/20 21:08:16 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
-//#include <ctype.h>
 
 int	ft_isalnum(int c)
 {
@@ -22,17 +20,4 @@ int	ft_isalnum(int c)
 	else
 		return (0);
 }
-/*
-int main (void) 
-{
-	int a = ft_isalnum('7');
-	int b = ft_isalnum('a');
-	int c = isalnum(91);
-	int d = isalnum(91);
-	printf("%d\n", a);
-	printf("%d\n", b);
-	printf("%d\n", c);
-	printf("%d\n", d);
-	return (0);
-}
-*/
+

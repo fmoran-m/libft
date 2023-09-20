@@ -6,7 +6,7 @@
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 19:22:32 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/20 13:37:03 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/09/20 20:45:48 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,4 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (0);
 }
-/*
-int main(void)
-{
-	char *s = "teste";
-	char *a = ft_strrchr(s, ('s') + 128);
-	char *b = strrchr(s, ('s') + 128);
-	printf("%s\n", a);
-	printf("%s\n", b);
-	return (0);
-}
-*/
+

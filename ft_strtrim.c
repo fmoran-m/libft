@@ -6,12 +6,11 @@
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 11:42:22 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/19 18:40:55 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/09/20 20:46:23 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
 
 size_t	ft_strlen(char const *s1)
 {
@@ -81,13 +80,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ptr[i] = '\0';
 	return (ptr);
 }
-/*
-int	main(void)
-{
-	const char s1[20] = "_sd__Hola_f__";
-	const char *set = "sdf_";
-	char *a = ft_strtrim(s1, set);
-	printf("%s\n", a);
-	return (0);
-}
-*/
+

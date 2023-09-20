@@ -6,7 +6,7 @@
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 13:22:18 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/19 20:42:34 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/09/20 20:45:26 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,4 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
-/*
-int main (void)
-{
-        char *a = "Hola";
-        char *b = "";
-        char *c = ft_strnstr(a, b, 4);
-        printf("%s\n", c);
-        return 0;
-}
-*/
+

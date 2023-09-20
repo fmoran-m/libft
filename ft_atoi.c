@@ -6,12 +6,11 @@
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 20:36:15 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/19 18:39:53 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/09/20 20:23:53 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
 
 int	ft_atoi(const char *str)
 {
@@ -39,13 +38,4 @@ int	ft_atoi(const char *str)
 		acum = acum * -1;
 	return (acum);
 }
-/*
-int main (void)
-{
-	int a = atoi("2147483648");
-	int b = ft_atoi("t147483648");
-	printf("%d\n", a);
-	printf("%d\n", b);
-	return 0;
-}
-*/
+

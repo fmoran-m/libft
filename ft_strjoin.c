@@ -6,12 +6,11 @@
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 15:21:45 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/19 18:40:36 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/09/20 21:09:07 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
 
 size_t	ft_strlen(const char *s)
 {
@@ -60,13 +59,4 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ptr[i] = '\0';
 	return (ptr);
 }
-/*
-int main (void)
-{
-	char a[20] = "Hola";
-	char b[20] = "Adios";
-	char *c = ft_strjoin(a, b);
-	printf("%s\n", c);
-	return 0;
-}
-*/
+

@@ -5,61 +5,36 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/19 16:03:05 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/19 18:40:25 by fmoran-m         ###   ########.fr       */
+/*   Created: 2023/09/20 18:13:17 by fmoran-m          #+#    #+#             */
+/*   Updated: 2023/09/20 20:31:26 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <string.h>
-//#include <stdio.h>
-
-char	*invcpy(char *d, char *s, size_t len, size_t z)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i] && i < len)
-	{
-		d[z] = s[z];
-		z--;
-		i++;
-	}
-	return (d);
-}
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char		*d;
-	const char	*s;	
-	size_t		i;
-	size_t		z;
+	size_t				i;
+	const unsigned char	*s;
+	unsigned char		*d;
 
 	d = dst;
 	s = src;
-	z = len - 1;
 	i = 0;
 	if (s < d)
-		d = invcpy(d, (char *)s, len, z);
+	{
+		while (len-- > 0)
+			d[len] = s[len];
+		return (d);
+	}
 	else
 	{
-		while (s[i] && i < len)
+		while (i < len)
 		{
 			d[i] = s[i];
 			i++;
 		}
+		return (dst);
 	}
-	return ((char *)d);
 }
-/*
-int	main(void)
-{
-	char a[400] = "Hola";
-	char b[400] = "Adios";
-	char *c = ft_memmove(a, b, 1);
-	char *d = memmove(a, b, 1);
-	printf("%s\n", c);
-	printf("%s\n", d);
-	return 0;
-}
-*/
+

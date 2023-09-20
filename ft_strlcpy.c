@@ -6,13 +6,11 @@
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 13:22:35 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/19 18:40:41 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/09/20 20:43:05 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
-//#include <string.h>
 
 size_t	ft_strlen(const char *s)
 {
@@ -41,15 +39,4 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	dst[i] = '\0';
 	return (srclen);
 }
-/*
-int main (void)
-{
-	char dst[29] = "\0";
-	char *src = "\0";
-	size_t a = ft_strlcpy(dst, src, 7);
-	size_t b = strlcpy(dst, src, 7);
-	printf("Size is %ld, string is'%s'\n", a, dst);
-	printf("Size is %ld, string is'%s'\n", b, dst);
-	return 0;
-}
-*/
+

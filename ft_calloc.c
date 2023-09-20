@@ -6,12 +6,11 @@
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 12:36:30 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/19 18:40:04 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/09/20 20:23:38 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
 
 void	*ft_calloc(size_t count, size_t size)
 {
@@ -31,11 +30,4 @@ void	*ft_calloc(size_t count, size_t size)
 	}
 	return (ptr);
 }
-/*
-int main (void)
-{
-	char *a = ft_calloc(4, 4);
-	printf("%s\n", a);
-	return 0;
-}
-*/
+

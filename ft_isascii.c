@@ -6,12 +6,9 @@
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 16:29:51 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/19 20:35:26 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/09/20 21:08:29 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-//#include <ctype.h>
-//#include <stdio.h>
 
 int	ft_isascii(int c)
 {
@@ -21,17 +18,4 @@ int	ft_isascii(int c)
 		return (0);
 }
 
-/*
-int main (void)
-{
-	int a = ft_isascii(0);
-	int b = isascii(0);
-	int c = ft_isascii(127);
-	int d = isascii(127);	
-	printf("%d\n", a);
-	printf("%d\n", b);
-	printf("%d\n",a);
-	printf("%d\n", a);
-	return (0);
-}
-*/
+

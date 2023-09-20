@@ -6,7 +6,7 @@
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 18:55:12 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/19 21:12:09 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/09/20 20:29:33 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,4 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-/*
-int main(void)
-{
-	char *a = "abc";
-	char *b = "abc";
-	int c = ft_memcmp (a, b, 7);
-	int d =	memcmp(a, b, 7);
-	printf("%d\n", c);
-	printf("%d\n", d);
-	return 0;
-}	
-*/
+
