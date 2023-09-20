@@ -6,7 +6,7 @@
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 19:22:32 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/19 21:48:19 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/09/20 13:37:03 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,29 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char	first;
+	unsigned char	ca;
+	const char		*first;
 
-	first = *s;
-	while (*s != '\0')
+	ca = c;
+	first = s;
+	while (*s)
 		s++;
-	while (*s != first && *s != c)
+	while (s >= first)
+	{
+		if (*s == ca)
+			return ((char *)s);
 		s--;
-	if (*s == first && *s != c)
-		return (0);
-	else
-		return ((char *)s);
+	}
+	return (0);
 }
 /*
 int main(void)
 {
-	char *s = "Hola";
-	char *a = ft_strrchr(s, 'H');
+	char *s = "teste";
+	char *a = ft_strrchr(s, ('s') + 128);
+	char *b = strrchr(s, ('s') + 128);
 	printf("%s\n", a);
+	printf("%s\n", b);
 	return (0);
 }
 */
