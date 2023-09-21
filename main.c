@@ -144,10 +144,11 @@ int main(void)
 	return 0;
 */
 
-	char a[20] = "que";
-	char b[30] = "abcd";
-	size_t n = strlcat(a, b, 0);
-	printf("Original: Return is %zu and string is %s\n", n, b);
+	char a[20];
+	char b[100] = "lorem ipsum dolor sit amet";
+	memset(a, 'r', 15);
+	size_t n = ft_strlcat(a, b, 5);
+	printf("Return is %zu and string is %s\n", n, a);
 	return 0;
 
 /*
