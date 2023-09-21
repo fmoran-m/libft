@@ -6,7 +6,7 @@
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 18:13:17 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/20 20:31:26 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/09/21 18:08:44 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		return (dst);
 	}
 }
-

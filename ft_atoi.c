@@ -6,7 +6,7 @@
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 20:36:15 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/20 20:23:53 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/09/21 18:12:18 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,3 @@ int	ft_atoi(const char *str)
 		acum = acum * -1;
 	return (acum);
 }
-

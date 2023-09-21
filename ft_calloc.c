@@ -6,7 +6,7 @@
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 12:36:30 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/20 20:23:38 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/09/21 18:12:30 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,3 @@ void	*ft_calloc(size_t count, size_t size)
 	}
 	return (ptr);
 }
-

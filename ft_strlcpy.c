@@ -6,7 +6,7 @@
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 13:22:35 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/20 20:43:05 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/09/21 18:08:54 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	dst[i] = '\0';
 	return (srclen);
 }
-

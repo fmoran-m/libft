@@ -143,13 +143,14 @@ int main(void)
 	printf("%s\n", c);
 	return 0;
 */
-
+/*
 	char a[20];
 	char b[100] = "lorem ipsum dolor sit amet";
 	memset(a, 'r', 15);
 	size_t n = ft_strlcat(a, b, 5);
 	printf("Return is %zu and string is %s\n", n, a);
 	return 0;
+*/
 
 /*
 	char dst[29] = "\0";
@@ -194,24 +195,19 @@ int main(void)
 	return (0);
 */
 
-/*
 	const char s1[20] = "_sd__Hola_f__";
-	const char *set = "sdf_";
+	const char *set = "";
 	char *a = ft_strtrim(s1, set);
 	printf("%s\n", a);
 	return (0);
-*/
 
 /*
-	char a[20] = "Hola";
-	char *b = ft_substr(a, 0, 6);
+	char a[20] ="";
+	char *b = ft_substr(a, 1, 11);
 	printf("%s\n", b);
-	return 0;
-*/
 
-/*
-	int a = ft_tolower('>');
-	printf("%c\n", a);
+	*/
+/* int a = ft_tolower('>'); printf("%c\n", a);
 	return (0);
 */
 
