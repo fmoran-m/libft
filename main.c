@@ -219,6 +219,5 @@ int main(void)
 int a = 123;
 char *b = ft_itoa(a);
 printf("%s\n", b);
-
 return (0); 
 }
