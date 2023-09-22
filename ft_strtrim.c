@@ -6,7 +6,7 @@
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 11:42:22 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/22 16:18:16 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/09/22 16:29:57 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,27 +53,18 @@ int	last(char const *s1, char const *set)
 	return (z);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*control_error(char *ptr)
 {
-	int	a;
-
-	int	z;	
-	int	i;
-	char	*ptr;
-
-	a = first(s1, set);
-	z = last(s1, set);
-	if (!s1[a] || z < 0)
-	{
-		ptr = (char *)malloc(1);
-		if (ptr == 0)
-			return (0);
-		ptr[0] = 0;
-		return (ptr);
-	}
-	ptr = (char *)malloc((z - a + 2));
 	if (ptr == 0)
 		return (0);
+	ptr[0] = 0;
+	return (ptr);
+}
+
+char	*allocate(const char *s1, char *ptr, int a, int z)
+{
+	int i;
+
 	i = 0;
 	while (a <= z)
 	{
@@ -82,5 +73,27 @@ char	*ft_strtrim(char const *s1, char const *set)
 		a++;
 	}
 	ptr[i] = '\0';
+	return (ptr);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	int	a;
+
+	int		z;	
+	char	*ptr;
+
+	a = first(s1, set);
+	z = last(s1, set);
+	if (!s1[a] || z < 0)
+	{
+		ptr = (char *)malloc(1);
+		ptr = control_error(ptr);
+		return (ptr);
+	}
+	ptr = (char *)malloc((z - a + 2));
+	if (ptr == 0)
+		return (0);
+	ptr = allocate(s1, ptr, a, z);
 	return (ptr);
 }
