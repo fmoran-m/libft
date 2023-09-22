@@ -194,13 +194,13 @@ int main(void)
 	printf("%s\n", b);
 	return (0);
 */
-
+/*
 	const char s1[50] = "";
 	const char *set = "abcd";
 	char *a = ft_strtrim(s1, set);
 	printf("%s\n", a);
 	return (0);
-
+*/
 /*
 	char a[20] ="";
 	char *b = ft_substr(a, 1, 11);
@@ -216,6 +216,9 @@ int main(void)
 	printf("%c\n", new);
 	return (0);
 */
-return (0);
-}
+int a = 123;
+char *b = ft_itoa(a);
+printf("%s\n", b);
 
+return (0); 
+}
