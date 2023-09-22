@@ -6,23 +6,13 @@
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 11:42:22 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/21 21:28:15 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/09/22 16:18:16 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char const *s1)
-{
-	size_t	i;
-
-	i = 0;
-	while (s1[i])
-		i++;
-	return (i);
-}
-
-size_t	first(char const *s1, char const *set)
+int	first(char const *s1, char const *set)
 {
 	size_t	a;
 	size_t	i;
@@ -31,26 +21,29 @@ size_t	first(char const *s1, char const *set)
 	i = 0;
 	while (set[i])
 	{
-		if (set[i] == s1[a])
+		if (set[i] == s1[a] && s1[a])
 		{
 			a++;
 			i = -1;
 		}
 		i++;
-	}	
+	}
 	return (a);
 }
 
-size_t	last(char const *s1, char const *set)
+int	last(char const *s1, char const *set)
 {
-	size_t	z;
-	size_t	i;
+	int	z;
+	int	i;
 
 	i = 0;
-	z = ft_strlen(s1) - 1;
+	if (ft_strlen(s1) > 0)
+		z = ft_strlen(s1) - 1;
+	else
+		z = 0;
 	while (set[i])
 	{
-		if (set[i] == s1[z])
+		if (set[i] == s1[z] && z >= 0)
 		{
 			z--;
 			i = -1;
@@ -62,14 +55,25 @@ size_t	last(char const *s1, char const *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	a;
-	size_t	z;	
-	size_t	i;
+	int	a;
+
+	int	z;	
+	int	i;
 	char	*ptr;
 
 	a = first(s1, set);
 	z = last(s1, set);
-	ptr = (char *)malloc((z - a + 2) * (sizeof(char) + 1));
+	if (!s1[a] || z < 0)
+	{
+		ptr = (char *)malloc(1);
+		if (ptr == 0)
+			return (0);
+		ptr[0] = 0;
+		return (ptr);
+	}
+	ptr = (char *)malloc((z - a + 2));
+	if (ptr == 0)
+		return (0);
 	i = 0;
 	while (a <= z)
 	{

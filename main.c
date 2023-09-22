@@ -195,8 +195,8 @@ int main(void)
 	return (0);
 */
 
-	const char s1[20] = "_sd__Hola_f__";
-	const char *set = "";
+	const char s1[50] = "";
+	const char *set = "abcd";
 	char *a = ft_strtrim(s1, set);
 	printf("%s\n", a);
 	return (0);
