@@ -25,19 +25,20 @@ char	*ft_itoa(int n)
 	if (n < 0)
 		negative = 1;
 	nr = 0;
-	while (n > 0)
+	while (n != 0)
 	{
 		n = n / 10;
 		nr++;
 	}
-	str = (char *)malloc(nr * sizeof(char) + 1 + negative);
+	str = (char *)malloc(nr * sizeof(char) + 1);
 	if (str == 0)
 		return (0);
 	i = 0;
-	while (original_n != 0)
+	n = original_n;
+	while (n != 0)
 	{
-		str[i] = (original_n % 10) + 48;
-		original_n = original_n / 10;
+		str[i] = (n % 10) + 48;
+		n = n / 10;
 		i++;
 	}
 	str[i] = 0;
@@ -46,6 +47,11 @@ char	*ft_itoa(int n)
 	if (final == 0)
 		return (0);
 	nr = 0;
+	if (original_n < 0)
+	{
+		final[nr] = '-';
+		nr++;
+	}
 	while (i >= 0)
 	{
 		final[nr] = str[i];
