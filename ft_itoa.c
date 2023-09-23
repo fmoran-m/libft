@@ -34,7 +34,7 @@ char	*ft_itoa(int n)
 	if (str == 0)
 		return (0);
 	i = 0;
-	while (original_n > 0)
+	while (original_n != 0)
 	{
 		str[i] = (original_n % 10) + 48;
 		original_n = original_n / 10;
