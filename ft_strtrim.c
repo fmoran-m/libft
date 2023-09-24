@@ -63,7 +63,7 @@ char	*control_error(char *ptr)
 
 char	*allocate(const char *s1, char *ptr, int a, int z)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (a <= z)
@@ -78,8 +78,7 @@ char	*allocate(const char *s1, char *ptr, int a, int z)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	a;
-
+	int		a;
 	int		z;	
 	char	*ptr;
 

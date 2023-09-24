@@ -12,53 +12,85 @@
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+void	invert(char *str)
+{
+	int		a;
+	int		z;
+	char	temp;
+
+	a = 0;
+	z = ft_strlen(str) - 1;
+	while (a < z)
+	{
+		temp = str[a];
+		str[a] = str[z];
+		str[z] = temp;
+		a++;
+		z--;
+	}
+}
+
+char	*reserve(int n)
 {
 	int		nr;
-	int		original_n;
-	char	*str;
-	char	*final;
-	int		i;
 	int		negative;
+	char	*str;
 
-	original_n = n;
+	nr = 0;
+	negative = 0;
 	if (n < 0)
 		negative = 1;
-	nr = 0;
 	while (n != 0)
 	{
 		n = n / 10;
 		nr++;
 	}
-	str = (char *)malloc(nr * sizeof(char) + 1);
+	str = (char *)malloc(nr * sizeof(char) + 1 + negative);
 	if (str == 0)
 		return (0);
+	return (str);
+}
+
+void	allocate(int n, char *str)
+{
+	int	i;
+	int	original_n;
+
 	i = 0;
-	n = original_n;
+	original_n = n;
 	while (n != 0)
 	{
-		str[i] = (n % 10) + 48;
+		str[i] = (n % 10);
+		if (str[i] < 0)
+			str[i] = str[i] * -1;
+		str[i] = str[i] + 48;
 		n = n / 10;
 		i++;
 	}
-	str[i] = 0;
-	i--;
-	final = (char *)malloc(nr * sizeof(char) + 1 + negative);
-	if (final == 0)
-		return (0);
-	nr = 0;
 	if (original_n < 0)
 	{
-		final[nr] = '-';
-		nr++;
+		str[i] = '-';
+		i++;
 	}
-	while (i >= 0)
-	{
-		final[nr] = str[i];
-		nr++;
-		i--;
-	}
-	final[nr] = 0;
-	return (final);
+	str[i] = 0;
 }
-	//TENER EN CUENTA NEGATIVOS, CONTROL DE ERRORES Y PASAR NORMINETTE (DIVIDIR EN FUNCIONES)
+
+char	*ft_itoa(int n)
+{
+	char	*str;
+
+	if (n == 0)
+	{
+		str = ft_strdup("0");
+		return (str);
+	}
+	if (n == -2147483648)
+	{
+		str = ft_strdup("-2147483648");
+		return (str);
+	}
+	str = reserve(n);
+	allocate(n, str);
+	invert(str);
+	return (str);
+}

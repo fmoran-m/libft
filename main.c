@@ -23,7 +23,7 @@ int main(void)
 
 	char *a = ft_calloc(4, 4);
 	printf("%s\n", a);
-	return 0;
+
 */
 
 /*
@@ -216,7 +216,7 @@ int main(void)
 	printf("%c\n", new);
 	return (0);
 */
-int a = 123;
+int a = -8301237;
 char *b = ft_itoa(a);
 printf("%s\n", b);
 return (0); 
