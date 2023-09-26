@@ -1,7 +1,7 @@
 #include "libft.h"
 
-int main(void)
-{
+//int main(void)
+//{
 /*
 
 	int a = atoi("2147483648");
@@ -216,8 +216,33 @@ int main(void)
 	printf("%c\n", new);
 	return (0);
 */
+/*
 int a = -8301237;
 char *b = ft_itoa(a);
 printf("%s\n", b);
-return (0); 
+*/
+
+char fool(unsigned int n, char c)
+	{
+		c = c - 32;
+		return (c);
+	}
+
+void f(unsigned int n, char* s)
+{
+	printf("%d  ", n);
+	printf("%s\n", s);
+}
+
+int	main (void)
+{
+
+//	char *rst;
+	char *s = "hola";
+
+//	rst = ft_strmapi(s, fool);
+
+	ft_striteri(s, f);
+//	printf("%s\n", rst);
+	return (0);
 }
