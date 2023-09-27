@@ -250,7 +250,21 @@ int	main (void)
 */
 int main(void)
 {
-	char *s = "aaaaaa";
+	int i = 0;
+	char *s = "_____";
 	char c = '_';
-	ft_split(s, c);	
+	char **ptr = ft_split(s, c);	
+	while(ptr[i])
+	{
+		printf("%s\n", ptr[i]);
+		i++;
+	}
+	i = 0;
+	while(ptr[i])
+	{
+		free(ptr[i]);
+		i++;
+	}
+	free(ptr);
+	return 0;
 }
