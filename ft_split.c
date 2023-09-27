@@ -6,81 +6,65 @@
 /*   By: fmoran-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 13:50:00 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/26 21:08:29 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/09/27 14:28:24 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	n_sep(char const *s, char c)
+size_t	count_word(char const *s, unsigned char ca)
 {
-	unsigned char	ca;
-	size_t			i;
-	size_t			n;
+	size_t	flag;
+	size_t	i;
+	size_t	n;
 
-	ca = c;
+	flag = 1;
 	i = 0;
 	n = 0;
+
 	while(s[i])
 	{
-		if (s[i] == ca)
+		if(s[i] != ca && flag == 1)
+		{
 			n++;
+			flag = 0;
+		}
+		if (s[i] == ca)
+			flag = 1;
 		i++;
-	}	
+	}
 	return (n);
 }
 
-char **res_mem(char const *s, char c, size_t n)
+char	**allocate_array(char const *s, unsigned char ca, char **ptr, size_t n_rows)
 {
-	unsigned char	ca;
-	char			*ptr;
-	size_t			i;
-	size_t			j;
-	size_t			r_size;
+	size_t i;
+	size_t j;
+	size_t z;
 
-	ca = c;
 	i = 0;
-	j = 0;
-	r_size = 0;
-	ptr = malloc(sizeof(char *) * (n+1));
-	if (ptr == NULL)
-		return (NULL);
-	while (s[i])
+	z = 0;
+	while (i < (n_rows + 1))
 	{
-		if (s[i] == ca)
+		j = 0;
+		while(s[z] != ca)
 		{
-			ptr[j] = malloc(p_size * r_size + 1)
-			if (ptr[j] == NULL)
-				return (NULL);
-			r_size = 0;
+			ptr[i][j] = '.';
 			j++;
 		}
-	i++;
-	r_size++;
+		ptr[i][j] = 0;
+		i++;
+		z++;
 	}
+	ptr[j] = 0;
 	return (ptr);
 }
 
-char **ft_split(char const *s, char c)
+void	ft_split(char const *s, char c)
 {
-	size_t			n;
-	char 			**ptr;
-	size_t 			i;
-	size_t 			j;
-	unsigned char	ca;
+	size_t 			n_rows;
 
-	n = n_sep(s, c);
-	ptr = res_mem(s, c, n);
-	ca = c;
-	i = 0;
-	while(ptr[i])
-	{
-		j = 0;
-		while (ptr[i][j])
-		{
-			while
-
-
-
-
-
+	s = ft_strtrim(s, &c);
+	n_rows = count_word(s, c);
+	printf("%zu\n", n_rows);
+}

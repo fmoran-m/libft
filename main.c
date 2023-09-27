@@ -222,6 +222,7 @@ char *b = ft_itoa(a);
 printf("%s\n", b);
 */
 
+/*
 char fool(unsigned int n, char c)
 	{
 		c = c - 32;
@@ -244,5 +245,12 @@ int	main (void)
 
 	ft_striteri(s, f);
 //	printf("%s\n", rst);
-	return (0);
+
+
+*/
+int main(void)
+{
+	char *s = "aaaaaa";
+	char c = '_';
+	ft_split(s, c);	
 }
