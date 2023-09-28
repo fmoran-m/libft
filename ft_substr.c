@@ -28,8 +28,8 @@ char	*pointer(char const *s, unsigned int start, size_t len)
 		i++;
 	}
 	new = (char *)malloc(k * sizeof(char) + 1);
-	if (new == 0)
-		return (0);
+	if (new == NULL)
+		return (NULL);
 	return (new);
 }
 
@@ -42,6 +42,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (start > ft_strlen(s))
 	{
 		new = (char *)malloc(1);
+		if (new == NULL)
+			return (NULL);
 		*new = '\0';
 		return (new);
 	}

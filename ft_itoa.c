@@ -46,8 +46,8 @@ char	*reserve(int n)
 		nr++;
 	}
 	str = (char *)malloc(nr * sizeof(char) + 1 + negative);
-	if (str == 0)
-		return (0);
+	if (str == NULL)
+		return (NULL);
 	return (str);
 }
 
