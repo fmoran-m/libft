@@ -251,8 +251,8 @@ int	main (void)
 int main(void)
 {
 	int i = 0;
-	char *s = "____Hola_que___tal_estamos___todos__";
-	char c = ' ';
+	char *s = "hello!";
+	char c = 32;
 	char **ptr = ft_split(s, c);	
 	while(ptr[i])
 	{

@@ -86,7 +86,7 @@ char	**ft_split(char const *s, char c)
 	ptr = ft_calloc((r_size + 1), sizeof(char *));
 	if (ptr == NULL)
 		return (NULL);
-	while(s[total])
+	while(s[total] && i < r_size)
 	{
 		if (s[total] != c)
 		{
