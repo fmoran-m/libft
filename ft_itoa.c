@@ -6,7 +6,7 @@
 /*   By: fmoran-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 19:27:04 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/29 16:01:52 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/09/29 16:23:53 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ char	*reserve(int n)
 		return (NULL);
 	return (str);
 }
-
 
 void	allocate(int n, char *str)
 {

@@ -1,7 +1,5 @@
 #include "libft.h"
 
-int main(void)
-{
 /*
 
 	int a = atoi("2147483648");
@@ -216,13 +214,12 @@ int main(void)
 	printf("%c\n", new);
 	return (0);
 */
-
+/*
 int a = 1000034;
 char *b = ft_itoa(a);
 printf("%s\n", b);
+*\
 
-
-/*
 char fool(unsigned int n, char c)
 	{
 		c = c - 32;
@@ -250,8 +247,8 @@ int	main (void)
 */
 /*
 	int i = 0;
-	char *s = "hello!";
-	char c = ' ';
+	char *s = "nonempty";
+	char c = '\0';
 	char **ptr = ft_split(s, c);	
 	while(ptr[i])
 	{
@@ -267,5 +264,60 @@ int	main (void)
 	free(ptr);
 	ft_split(s, c);
 */
+/*
+	char *a;
+	t_list *b;
+
+	a = "deberia tener mazo memoria por aqui asignando, como es posible que todo esto sea dinamico";
+	b = ft_lstnew(a);
+	printf("%s\n", (char *)b -> content);
+*/
+void ft_print_list(t_list *lst)
+{
+    while (lst)
+    {
+        printf("%s -> ", (char *)lst->content);
+        lst = lst->next;
+    }
+    printf("NULL\n");
+}
+
+int main (void)
+{
+	char *a = "Hola";
+	char *b = "Adios";
+	char *c = "Betis";
+	t_list *primero;
+	t_list *segundo;
+	t_list *new;
+	t_list **todas;
+
+	primero = malloc(sizeof(t_list));
+	segundo = malloc(sizeof(t_list));
+	new = malloc(sizeof(t_list));
+	todas = &primero;
+
+	primero->content = a;
+	primero->next = segundo;
+
+	segundo->content = b;
+	segundo->next = 0;
+
+	new->content = c;
+	new->next = 0;
+
+	*todas = primero;
+	int i = 0;
+	ft_lstadd_front(todas, new);
+
+    ft_print_list(*todas);
+
+    t_list *temp;
+    while (*todas)
+    {
+        temp = *todas;
+        *todas = (*todas)->next;
+        free(temp);
+    }
 	return 0;
 }
