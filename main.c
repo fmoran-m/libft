@@ -252,7 +252,7 @@ int main(void)
 {
 	int i = 0;
 	char *s = "hello!";
-	char c = 32;
+	char c = ' ';
 	char **ptr = ft_split(s, c);	
 	while(ptr[i])
 	{

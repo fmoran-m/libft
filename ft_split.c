@@ -24,7 +24,7 @@ int	count_words(char const *s, char c)
 	return (n);
 }
 
-int	count_str(char const *s, char c, int total)
+int	count_letter(char const *s, char c, int total)
 {
 	int i;
 
@@ -39,7 +39,7 @@ void	free_arrays(char **ptr, int i)
 	int	n;
 
 	n = 0;
-	while(n < i) //OJO PUEDE ESTAR MAL
+	while(n < i) 
 	{
 		free(ptr[n]);
 		n++;
@@ -82,22 +82,29 @@ char	**ft_split(char const *s, char c)
 
 	total = 0;
 	i = 0;
+	if (s == NULL)
+		return (NULL);
 	r_size = count_words(s, c);
 	ptr = ft_calloc((r_size + 1), sizeof(char *));
 	if (ptr == NULL)
 		return (NULL);
+	if (r_size == 0)
+	{
+		ptr[i] = (NULL);
+		return (ptr);
+	}
 	while(s[total] && i < r_size)
 	{
 		if (s[total] != c)
 		{
-			ptr[i] = (char *)ft_calloc(count_str(s, c, total) - total + 1, sizeof(char));
+			ptr[i] = (char *)ft_calloc(count_letter(s, c, total) - total + 1, sizeof(char));
 			if(ptr[i] == NULL)
 			{
 				free_arrays(ptr, i);
 				return (NULL);
 			}
 			i++;
-			total = count_str(s, c, total);
+			total = count_letter(s, c, total);
 		}
 		total++;
 	}
