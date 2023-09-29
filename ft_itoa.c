@@ -6,7 +6,7 @@
 /*   By: fmoran-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 19:27:04 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/22 20:13:37 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/09/29 16:01:52 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ char	*reserve(int n)
 	return (str);
 }
 
+
 void	allocate(int n, char *str)
 {
 	int	i;
@@ -90,6 +91,8 @@ char	*ft_itoa(int n)
 		return (str);
 	}
 	str = reserve(n);
+	if (str == NULL)
+		return (NULL);
 	allocate(n, str);
 	invert(str);
 	return (str);

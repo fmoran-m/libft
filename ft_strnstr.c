@@ -6,7 +6,7 @@
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 13:22:18 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/21 18:09:01 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/09/29 15:24:48 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 	i = 0;
 	k = 0;
+	if (ft_strlen(haystack) < ft_strlen(needle))
+		return (NULL);
 	if (*needle == '\0')
 		return ((char *)haystack);
 	while (*haystack != '\0' && i < len)

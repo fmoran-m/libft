@@ -1,6 +1,6 @@
 #include "libft.h"
 
-int	count_words(char const *s, char c)
+int	ft_count_words(char const *s, unsigned char ca)
 {
 	int	flag;
 	int	i;
@@ -12,29 +12,29 @@ int	count_words(char const *s, char c)
 
 	while(s[i])
 	{
-		if(s[i] != c && flag == 1)
+		if(s[i] != ca && flag == 1)
 		{
 			n++;
 			flag = 0;
 		}
-		if (s[i] == c)
+		if (s[i] == ca)
 			flag = 1;
 		i++;
 	}
 	return (n);
 }
 
-int	count_letter(char const *s, char c, int total)
+int	ft_count_letter(char const *s, unsigned char ca, int total)
 {
 	int i;
 
 	i = total;
-	while(s[i] != c && s[i])
+	while(s[i] != ca && s[i])
 		i++;
 	return (i);
 }
 
-void	free_arrays(char **ptr, int i)
+void	ft_free_arrays(char **ptr, int i)
 {
 	int	n;
 
@@ -47,7 +47,7 @@ void	free_arrays(char **ptr, int i)
 	free(ptr);
 }
 
-void	allocate_arrays(char const *s, char c, char **ptr)
+void	ft_allocate_arrays(char const *s, unsigned char ca, char **ptr)
 {
 	int i;
 	int j;
@@ -55,19 +55,19 @@ void	allocate_arrays(char const *s, char c, char **ptr)
 
 	i = 0;
 	total = 0;
-	while (s[total] == c)
+	while (s[total] == ca)
 		total++;
-	while (i < count_words(s, c))
+	while (i < ft_count_words(s, ca))
 	{
 		j = 0;
-		while (s[total] != c && s[total] != 0)
+		while (s[total] != ca && s[total] != 0)
 		{
 			ptr[i][j] = s[total];
 			total++;
 			j++;
 		}
 		ptr[i][j] = 0;
-		while(s[total] == c)
+		while(s[total] == ca)
 			total++;
 		i++;
 	}
@@ -79,12 +79,14 @@ char	**ft_split(char const *s, char c)
 	int				total;
 	int 			i;
 	char 			**ptr;
+	unsigned char	ca;
 
 	total = 0;
 	i = 0;
+	ca = c;
 	if (s == NULL)
 		return (NULL);
-	r_size = count_words(s, c);
+	r_size = ft_count_words(s, ca);
 	ptr = ft_calloc((r_size + 1), sizeof(char *));
 	if (ptr == NULL)
 		return (NULL);
@@ -95,19 +97,19 @@ char	**ft_split(char const *s, char c)
 	}
 	while(s[total] && i < r_size)
 	{
-		if (s[total] != c)
+		if (s[total] != ca)
 		{
-			ptr[i] = (char *)ft_calloc(count_letter(s, c, total) - total + 1, sizeof(char));
+			ptr[i] = (char *)ft_calloc(ft_count_letter(s, ca, total) - total + 1, sizeof(char));
 			if(ptr[i] == NULL)
 			{
-				free_arrays(ptr, i);
+				ft_free_arrays(ptr, i);
 				return (NULL);
 			}
 			i++;
-			total = count_letter(s, c, total);
+			total = ft_count_letter(s, ca, total);
 		}
 		total++;
 	}
-	allocate_arrays(s, c, ptr);
+	ft_allocate_arrays(s, ca, ptr);
 	return (ptr);
 }

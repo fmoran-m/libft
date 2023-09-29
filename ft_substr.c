@@ -6,7 +6,7 @@
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 16:42:05 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/22 13:28:47 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/09/29 16:04:07 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char			*new;
 
 	i = 0;
+	if (s == NULL)
+		return (NULL);
 	if (start > ft_strlen(s))
 	{
 		new = (char *)malloc(1);
@@ -48,6 +50,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (new);
 	}
 	new = pointer(s, start, len);
+	if (new == NULL)
+		return (NULL);
 	while (s[start] && i < len)
 	{
 		new[i] = s[start];

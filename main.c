@@ -1,7 +1,7 @@
 #include "libft.h"
 
-//int main(void)
-//{
+int main(void)
+{
 /*
 
 	int a = atoi("2147483648");
@@ -177,11 +177,11 @@
 	printf("%d\n", d);
 	return 0;
 */
-
 /*
-	char *a = "Hola";
-	char *b = "";
-	char *c = ft_strnstr(a, b, 4);
+
+	char *haystack = "abc";
+	char *needle = "abcdef";
+	char *c = ft_strnstr(haystack, needle, 5);
 	printf("%s\n", c);
 	return 0;
 */
@@ -203,10 +203,10 @@
 */
 /*
 	char a[20] ="";
-	char *b = ft_substr(a, 1, 11);
+	char *b = ft_substr("", 0, 0);
 	printf("%s\n", b);
+*/
 
-	*/
 /* int a = ft_tolower('>'); printf("%c\n", a);
 	return (0);
 */
@@ -216,11 +216,11 @@
 	printf("%c\n", new);
 	return (0);
 */
-/*
-int a = -8301237;
+
+int a = 1000034;
 char *b = ft_itoa(a);
 printf("%s\n", b);
-*/
+
 
 /*
 char fool(unsigned int n, char c)
@@ -248,8 +248,7 @@ int	main (void)
 
 
 */
-int main(void)
-{
+/*
 	int i = 0;
 	char *s = "hello!";
 	char c = ' ';
@@ -267,5 +266,6 @@ int main(void)
 	}
 	free(ptr);
 	ft_split(s, c);
+*/
 	return 0;
 }
