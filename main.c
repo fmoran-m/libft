@@ -310,14 +310,11 @@ int main (void)
 	int i = 0;
 	ft_lstadd_front(todas, new);
 
-    ft_print_list(*todas);
-
+	while (*todas)
+	{
+		printf("%s\n", (char *) (*todas)->content); 
+		*todas = (*todas)->next;
+	}
     t_list *temp;
-    while (*todas)
-    {
-        temp = *todas;
-        *todas = (*todas)->next;
-        free(temp);
-    }
 	return 0;
 }
