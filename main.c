@@ -308,13 +308,19 @@ int main (void)
 
 	*todas = primero;
 	int i = 0;
-	ft_lstadd_front(todas, new);
+	ft_lstadd_back(todas, new);
 
 	while (*todas)
 	{
 		printf("%s\n", (char *) (*todas)->content); 
 		*todas = (*todas)->next;
 	}
-    t_list *temp;
+	/*
+	int size;
+	size = ft_lstsize(new);
+	printf("%d\n", size);
+	new = ft_lstlast(new);
+	printf("%s\n", new->content);
+	*/
 	return 0;
 }

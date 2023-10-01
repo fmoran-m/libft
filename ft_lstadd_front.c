@@ -12,11 +12,8 @@
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new) 
 {
 	new->next = *lst;
 	*lst = new;
 }
-
-//LST es la dirección a un puntero al primer nodo de la lista
-//NEW es un puntero al primer nodo de la lista 
