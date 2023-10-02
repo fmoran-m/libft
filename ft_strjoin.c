@@ -6,21 +6,11 @@
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 15:21:45 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/21 18:08:50 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/10/02 14:12:28 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlen(const char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
 
 char	*new(char const *s1, char const *s2)
 {

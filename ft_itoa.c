@@ -6,7 +6,7 @@
 /*   By: fmoran-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 19:27:04 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/29 16:23:53 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/10/02 14:14:04 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ char	*reserve(int n)
 	return (str);
 }
 
-void	allocate(int n, char *str)
+void	copy_string(int n, char *str)
 {
 	int	i;
 	int	original_n;
@@ -92,7 +92,7 @@ char	*ft_itoa(int n)
 	str = reserve(n);
 	if (str == NULL)
 		return (NULL);
-	allocate(n, str);
+	copy_string(n, str);
 	invert(str);
 	return (str);
 }
