@@ -6,7 +6,7 @@
 /*   By: fmoran-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 16:25:01 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/10/02 13:02:10 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/10/02 21:38:32 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ void	ft_allocate_arrays(char const *s, unsigned char ca, char **ptr)
 			total++;
 			j++;
 		}
-		while (s[total] == ca)
+		while (s[total] == ca && ca != 0)
 			total++;
 		i++;
 	}
@@ -119,7 +119,7 @@ char	**ft_split(char const *s, char c)
 			total = ft_count_letter(s, ca, total);
 		}
 		else
-			total++;
+				total++;
 	}
 	ft_allocate_arrays(s, ca, ptr);
 	return (ptr);

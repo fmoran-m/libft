@@ -1,5 +1,7 @@
 #include "libft.h"
 
+int main (void)
+{
 /*
 
 	int a = atoi("2147483648");
@@ -91,15 +93,11 @@
 	return 0;
 */
 
-/*
-	char a[4] = "hola";
-	char b[4] = "aaaa";
-	char *c = ft_memcpy(a, b, 4);
-	char *d = memcpy(a, b, 4);
+	char *c = ft_memcpy(((void *)0), ((void *)0), 3);
+	char *d = memcpy(((void *)0), ((void *)0), 3);
 	printf("%s\n", c);
 	printf("%s\n", d);
 	return(0);
-*/
 
 /*
 	char a[400] = "Hola";
@@ -149,7 +147,6 @@
 	printf("Return is %zu and string is %s\n", n, a);
 	return 0;
 */
-
 /*
 	char dst[29] = "\0";
 	char *src = "\0";
@@ -272,6 +269,7 @@ int	main (void)
 	b = ft_lstnew(a);
 	printf("%s\n", (char *)b -> content);
 */
+/*
 void ft_print_list(t_list *lst)
 {
     while (lst)
@@ -315,6 +313,7 @@ int main (void)
 		printf("%s\n", (char *) (*todas)->content); 
 		*todas = (*todas)->next;
 	}
+*/
 	/*
 	int size;
 	size = ft_lstsize(new);

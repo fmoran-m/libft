@@ -6,7 +6,7 @@
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 18:13:17 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/21 18:08:44 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/10/02 20:42:26 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	const unsigned char	*s;
 	unsigned char		*d;
 
+	if (dst == 0 && src == 0)
+		return (NULL);
 	d = dst;
 	s = src;
 	i = 0;
