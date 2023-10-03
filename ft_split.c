@@ -6,7 +6,7 @@
 /*   By: fmoran-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 16:25:01 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/10/03 17:08:38 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/10/03 17:14:42 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,6 @@ void	ft_allocate_arrays(char const *s, unsigned char ca, char **ptr)
 
 char	**ft_split(char const *s, char c)
 {
-	int				r_size;
 	int				total;
 	int				i;
 	char			**ptr;
@@ -96,16 +95,15 @@ char	**ft_split(char const *s, char c)
 	ca = c;
 	if (!s)
 		return (NULL);
-	r_size = ft_count_words(s, ca);
-	ptr = ft_calloc((r_size + 1), sizeof(char *));
+	ptr = ft_calloc((ft_count_words(s, ca) + 1), sizeof(char *));
 	if (!ptr)
 		return (NULL);
-	if (!r_size)
+	if (!ft_count_words(s, ca))
 	{
 		ptr[i] = (NULL);
 		return (ptr);
 	}
-	while (i < r_size)
+	while (i < ft_count_words(s, ca))
 	{
 		if (s[total] != ca)
 		{
@@ -116,7 +114,7 @@ char	**ft_split(char const *s, char c)
 				return (NULL);
 			}
 			i++;
-			total = ft_count_letter(s, ca, total);
+			total = ft_len(s, ca, total);
 		}
 		else
 				total++;
