@@ -6,7 +6,7 @@
 /*   By: fmoran-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 16:25:01 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/10/02 21:38:32 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/10/03 17:08:38 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	ft_count_words(char const *s, unsigned char ca)
 	return (n);
 }
 
-int	ft_count_letter(char const *s, unsigned char ca, int total)
+int	ft_len(char const *s, unsigned char ca, int total)
 {
 	int	i;
 
@@ -94,13 +94,13 @@ char	**ft_split(char const *s, char c)
 	total = 0;
 	i = 0;
 	ca = c;
-	if (s == NULL)
+	if (!s)
 		return (NULL);
 	r_size = ft_count_words(s, ca);
 	ptr = ft_calloc((r_size + 1), sizeof(char *));
-	if (ptr == NULL)
+	if (!ptr)
 		return (NULL);
-	if (r_size == 0)
+	if (!r_size)
 	{
 		ptr[i] = (NULL);
 		return (ptr);
@@ -109,7 +109,7 @@ char	**ft_split(char const *s, char c)
 	{
 		if (s[total] != ca)
 		{
-			ptr[i] = ft_calloc(ft_count_letter (s, ca, total) - total + 1, sizeof(char));
+			ptr[i] = ft_calloc(ft_len(s, ca, total) - total + 1, sizeof(char));
 			if (ptr[i] == NULL)
 			{
 				ft_free_arrays(ptr, i);
