@@ -19,31 +19,28 @@ int main (void)
 	return (0);
 */
 
-
+/*
 	char *a = ft_calloc(0, 0);
 	printf("%s\n", a);
-
-
+*/
 /*
-	int a = ft_isalnum('7');
-	int b = ft_isalnum('a');
-	int c = isalnum(91);
-	int d = isalnum(91);
+	int a = ft_isalnum('h');
+	int b = ft_isalnum('0');
+	int c = isalnum('h');
+	int d = isalnum('0');
 	printf("%d\n", a);
 	printf("%d\n", b);
 	printf("%d\n", c);
 	printf("%d\n", d);
 	return (0);
-*/
-
+    */
 /*
-	int a = ft_isalpha('a');
-	int b = isalpha('a');
+	int a = ft_isalpha('l');
+	int b = isalpha('l');
 	printf("%d\n", a);
 	printf("%d\n", b);
 	return (0);
 */
-
 /*
 	int a = ft_isascii(0);
 	int b = isascii(0);
@@ -54,22 +51,18 @@ int main (void)
 	printf("%d\n",a);
 	printf("%d\n", a);
 	return (0);
-*/
-
+    */
 /*
-	int a = ft_isdigit('7');
-	int b = isdigit('a');
+	int b = isdigit('1');
 	printf("%d", a);
-	printf("%d", b); return (0);
+	printf("%d", b); 
+	return (0);
 */
-
-/*
-	int a = ft_isprint(1);
-	int b = isprint(1);
+	int a = ft_isprint(77);
+	int b = isprint(77);
 	printf("%d\n", a);
 	printf("%d\n", b);
 	return (0);
-*/
 
 /*
 	int a[7] = {-49, 49, 1, -1, 0, -2, 2};
