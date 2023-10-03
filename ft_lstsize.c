@@ -6,7 +6,7 @@
 /*   By: fmoran-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 16:57:00 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/10/03 16:58:53 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/10/03 19:15:58 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ int	ft_lstsize(t_list *lst)
 	if (!lst)
 		return (0);
 	i = 0;
-	while (lst->next != 0)
+	while (lst)
 	{
 		lst = lst->next;
 		i++;
 	}
-	return (i + 1);
+	return (i);
 }
