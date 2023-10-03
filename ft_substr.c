@@ -6,13 +6,13 @@
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 16:42:05 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/29 16:04:07 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/10/03 20:59:23 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*pointer(char const *s, unsigned int start, size_t len)
+static char	*pointer(char const *s, unsigned int start, size_t len)
 {
 	size_t			i;
 	size_t			k;

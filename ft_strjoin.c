@@ -6,13 +6,13 @@
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 15:21:45 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/10/02 14:12:28 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/10/03 20:54:22 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*new(char const *s1, char const *s2)
+static char	*new(char const *s1, char const *s2)
 {
 	size_t	len1;
 	size_t	len2;

@@ -6,13 +6,13 @@
 /*   By: fmoran-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 20:07:53 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/10/03 20:10:43 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/10/03 20:53:52 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_count_words(char const *s, unsigned char c)
+static int	ft_count_words(char const *s, unsigned char c)
 {
 	int	flag;
 	int	i;
@@ -35,7 +35,7 @@ int	ft_count_words(char const *s, unsigned char c)
 	return (n);
 }
 
-int	ft_len(char const *s, unsigned char c, int total)
+static int	ft_len(char const *s, unsigned char c, int total)
 {
 	int	i;
 
@@ -45,7 +45,7 @@ int	ft_len(char const *s, unsigned char c, int total)
 	return (i);
 }
 
-void	ft_free_arrays(char **ptr, int i)
+static void	ft_free_arrays(char **ptr, int i)
 {
 	int	n;
 
@@ -58,7 +58,7 @@ void	ft_free_arrays(char **ptr, int i)
 	free(ptr);
 }
 
-void	ft_allocate_arrays(char const *s, unsigned char c, char **ptr)
+static void	ft_allocate_arrays(char const *s, unsigned char c, char **ptr)
 {
 	int	i;
 	int	j;

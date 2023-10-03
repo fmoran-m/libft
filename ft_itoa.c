@@ -6,13 +6,13 @@
 /*   By: fmoran-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 19:27:04 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/10/02 14:14:04 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/10/03 20:51:44 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	invert(char *str)
+static void	invert(char *str)
 {
 	int		a;
 	int		z;
@@ -30,7 +30,7 @@ void	invert(char *str)
 	}
 }
 
-char	*reserve(int n)
+static char	*reserve(int n)
 {
 	int		nr;
 	int		negative;
@@ -51,7 +51,7 @@ char	*reserve(int n)
 	return (str);
 }
 
-void	copy_string(int n, char *str)
+static void	copy_string(int n, char *str)
 {
 	int	i;
 	int	original_n;

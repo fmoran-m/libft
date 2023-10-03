@@ -6,13 +6,13 @@
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 11:42:22 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/27 12:55:18 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/10/03 20:58:37 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	first(char const *s1, char const *set)
+static int	first(char const *s1, char const *set)
 {
 	size_t	a;
 	size_t	i;
@@ -31,7 +31,7 @@ int	first(char const *s1, char const *set)
 	return (a);
 }
 
-int	last(char const *s1, char const *set)
+static int	last(char const *s1, char const *set)
 {
 	int	z;
 	int	i;
@@ -53,7 +53,7 @@ int	last(char const *s1, char const *set)
 	return (z);
 }
 
-char	*control_error(char *ptr)
+static char	*control_error(char *ptr)
 {
 	if (ptr == 0)
 		return (0);
@@ -61,7 +61,7 @@ char	*control_error(char *ptr)
 	return (ptr);
 }
 
-char	*allocate(const char *s1, char *ptr, int a, int z)
+static char	*allocate(const char *s1, char *ptr, int a, int z)
 {
 	int	i;
 
