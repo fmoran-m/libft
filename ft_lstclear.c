@@ -16,6 +16,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*temp;
 
+<<<<<<< HEAD
 	if (!lst || !del)
 		return ;
 	while (*lst)
@@ -25,4 +26,14 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		*lst = temp;
 	}
 	*lst = NULL;
+=======
+    while (*lst)
+    {
+	temp = (*lst)->next;
+	del((*lst)->content);
+	free(*lst);
+	*lst = temp;
+    }
+    *lst = NULL;
+>>>>>>> 68a7bd9e0959b921ae946adfd844dc4ed5783bd7
 }
