@@ -6,7 +6,7 @@
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 13:41:54 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/10/02 20:35:51 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/10/04 15:33:27 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	unsigned char			*destiny;
 	const unsigned char		*source;
 
-	if (dst == 0 && src == 0)
+	if (!dst && !src)
 		return (NULL);
 	destiny = dst;
 	source = src;

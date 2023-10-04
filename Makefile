@@ -17,15 +17,18 @@ all:	$(NAME)
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
-bonus: $(O.BONUS)
-	ar rcs $(NAME) $(O.BONUS)
+bonus: $(O.BONUS) $(OBJS)
+	ar rcs $(NAME) $(O.BONUS) $(OBJS)
 
 %.o:%.c
 		gcc $(FLAGS) -c $< -o $@
 
 clean:
 		rm -f $(OBJS) $(O.BONUS)
+
 fclean:	clean
 		rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: re clean fclean bonus all

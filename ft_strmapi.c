@@ -6,7 +6,7 @@
 /*   By: fmoran-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 20:25:10 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/26 20:43:01 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/10/04 15:24:47 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 	unsigned int	size;
 
+	if (!s || !f)
+		return (0);
 	size = ft_strlen(s);
 	ptr = (char *)malloc(size + 1);
 	if (ptr == NULL)

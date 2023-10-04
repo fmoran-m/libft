@@ -6,7 +6,7 @@
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 13:44:02 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/21 18:12:55 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/10/04 15:48:41 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_bzero(void *s, size_t n)
 {
 	size_t			i;
-	unsigned char	    *str;
+	unsigned char	*str;
 
 	str = s;
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 18:30:29 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/10/03 20:31:32 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/10/04 15:07:38 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # include <stdio.h>
 # include <string.h>
 # include <ctype.h>
-# include <stdint.h>
 
 typedef struct s_list
 {

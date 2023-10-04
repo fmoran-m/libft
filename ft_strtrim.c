@@ -6,7 +6,7 @@
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 11:42:22 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/10/03 20:58:37 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/10/04 15:27:26 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		z;	
 	char	*ptr;
 
+	if (!s1)
+		return (0);
 	a = first(s1, set);
 	z = last(s1, set);
 	if (!s1[a] || z < 0)
