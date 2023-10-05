@@ -6,7 +6,7 @@
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 12:36:30 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/10/04 16:48:29 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/10/05 16:45:21 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_calloc(size_t count, size_t size)
 
 	i = 0;
 	if (count == ULONG_MAX || size == ULONG_MAX)
-		return (0);
+		return (NULL);
 	total_amount = size * count;
 	ptr = malloc(total_amount);
 	if (ptr == 0)

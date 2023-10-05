@@ -6,7 +6,7 @@
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 13:13:24 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/10/04 15:42:54 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/10/05 16:32:11 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	original_dest;
 	size_t	k;
 
+	if ((!dst || !src) && dstsize == 0)
+		return (0);
 	original_src = ft_strlen(src);
 	original_dest = ft_strlen(dst);
 	k = original_dest;

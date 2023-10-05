@@ -6,13 +6,13 @@
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 13:22:18 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/09/29 15:24:48 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/10/05 18:25:09 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *h, const char *n, size_t len)
 {
 	size_t	i;
 	size_t	k;
@@ -20,20 +20,20 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 	i = 0;
 	k = 0;
-	if (ft_strlen(haystack) < ft_strlen(needle))
-		return (NULL);
-	if (*needle == '\0')
-		return ((char *)haystack);
-	while (*haystack != '\0' && i < len)
+	if (((!h || !n) && len == 0) || (ft_strlen(h) < ft_strlen(n)))
+		return (0);
+	if (*n == '\0')
+		return ((char *)h);
+	while (*h != '\0' && i < len)
 	{
 		temp = i;
-		while (haystack[i] && needle[k] && haystack[i] == needle[k] && i < len)
+		while (h[i] && n[k] && h[i] == n[k] && i < len)
 		{
 			i++;
 			k++;
 		}
-		if (needle[k] == '\0')
-			return ((char *)haystack + temp);
+		if (n[k] == '\0')
+			return ((char *)h + temp);
 		i = temp;
 		k = 0;
 		i++;

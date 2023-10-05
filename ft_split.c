@@ -6,7 +6,7 @@
 /*   By: fmoran-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 20:07:53 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/10/03 20:53:52 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/10/05 19:12:04 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,8 +91,10 @@ char	**ft_split(char const *s, char c)
 
 	total = 0;
 	i = 0;
+	if (!s)
+		return (NULL);
 	ptr = ft_calloc((ft_count_words(s, c) + 1), sizeof(char *));
-	if (!s || !ptr)
+	if (!ptr)
 		return (NULL);
 	if (!ft_count_words(s, c))
 		return (ptr);
