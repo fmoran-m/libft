@@ -6,7 +6,7 @@
 /*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 18:30:29 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/10/04 20:20:36 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/10/06 00:52:11 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,17 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h>
-# include <string.h>
-# include <ctype.h>
 
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }				t_list;
+struct s_vars
+{
+	int	total;
+	int	i;
+};
 int				ft_atoi(const char *str);
 void			ft_bzero(void *s, size_t n);
 void			*ft_calloc(size_t count, size_t size);

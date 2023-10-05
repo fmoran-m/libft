@@ -5,8 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmoran-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/06 00:36:25 by fmoran-m          #+#    #+#             */
+/*   Updated: 2023/10/06 00:49:19 by fmoran-m         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fmoran-m <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 20:07:53 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/10/05 19:12:04 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/10/06 00:35:45 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +47,7 @@ static int	ft_count_words(char const *s, unsigned char c)
 	return (n);
 }
 
-static int	ft_len(char const *s, unsigned char c, int total)
+static int	l(char const *s, unsigned char c, int total)
 {
 	int	i;
 
@@ -85,12 +97,11 @@ static void	ft_allocate_arrays(char const *s, unsigned char c, char **ptr)
 
 char	**ft_split(char const *s, char c)
 {
-	int				total;
-	int				i;
-	char			**ptr;
+	struct s_vars		a;
+	char				**ptr;
 
-	total = 0;
-	i = 0;
+	a.total = 0;
+	a.i = 0;
 	if (!s)
 		return (NULL);
 	ptr = ft_calloc((ft_count_words(s, c) + 1), sizeof(char *));
@@ -98,17 +109,16 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	if (!ft_count_words(s, c))
 		return (ptr);
-	while (i < ft_count_words(s, c))
+	while (a.i < ft_count_words(s, c))
 	{
-		if (s[total] != c)
+		if (s[a.total] != c)
 		{
-			ptr[i] = ft_calloc(ft_len(s, c, total) - total + 1, sizeof(char));
-			if (ptr[i++] == NULL)
-				return (ft_free_arrays(ptr, i), NULL);
-			total = ft_len(s, c, total);
+			ptr[a.i] = ft_calloc(l(s, c, a.total) - a.total + 1, 1);
+			if (ptr[a.i++] == NULL)
+				return (ft_free_arrays(ptr, a.i), NULL);
+			a.total = l(s, c, a.total) - 1;
 		}
-		else
-			total++;
+		a.total++;
 	}
 	ft_allocate_arrays(s, c, ptr);
 	return (ptr);
