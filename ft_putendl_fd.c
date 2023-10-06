@@ -6,7 +6,7 @@
 /*   By: fmoran-m <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 13:58:58 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/10/04 20:26:10 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2023/10/06 13:19:33 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 void	ft_putendl_fd(char *s, int fd)
 {
 	if (!s)
+		return ;
+	if (fd < 0)
 		return ;
 	write(fd, s, ft_strlen(s));
 	write(fd, "\n", 1);
