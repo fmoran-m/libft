@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fmoran-m <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: fmoran-m <fmoran-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 18:04:16 by fmoran-m          #+#    #+#             */
-/*   Updated: 2023/10/06 15:49:29 by fmoran-m         ###   ########.fr       */
+/*   Updated: 2024/06/10 18:15:13 by fmoran-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,4 @@ t_list	*ft_lstnew(void *content)
 	new -> content = content;
 	new -> next = 0;
 	return (new);
-}	
+}
