@@ -1,5 +1,5 @@
 
-# Libtf
+# Libft
 
 The libft library is the first project you tackle at 42. Its objective is to reprogram functions from the standard C library, along with additional routines that will be useful in future projects. It aims to teach and reinforce fundamental low-level and C programming concepts, ranging from variables, functions, pointers and data types to strings, arrays, memory allocation and linked lists. This project also emphasizes understanding how memory works, the differences between the heap and the stack, and how data is managed within these areas.
 
