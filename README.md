@@ -60,7 +60,6 @@ The substring begins at index 'start' and is of maximum size 'len'.
 
 ```
 char *ft_strjoin(char const *s1, char const *s2);
-
 ```
 
 Allocates and returns a new string, which is the result of the concatenation of 's1' and 's2'.
@@ -74,7 +73,6 @@ Allocates and returns a new string, which is the result of the concatenation of 
 
 ```
 char *ft_strtrim(char const *s1, char const *set);
-
 ```
 
 Allocates and returns a copy of 's1' with the characters specified in 'set' removed form the beginning and the end of the string.
@@ -103,7 +101,6 @@ with a NULL pointer.
 
 ```
 char *ft_itoa(int n);
-
 ```
 
 Allocates and returns a string representing the integer received as an argument. Negative numbers must be handled.
