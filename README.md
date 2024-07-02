@@ -44,9 +44,7 @@ This section includes several functions that either do not exist in the standard
 #### ft_substr
 
 ```
-char *ft_substr(char const *s, unsigned int start,
-size_t len);
-
+char *ft_substr(char const *s, unsigned int start, size_t len);
 ```
 
 Allocates and returns a substring from the string 's'.
@@ -90,7 +88,6 @@ Allocates and returns a copy of 's1' with the characters specified in 'set' remo
 
 ```
 char **ft_split(char const *s, char c);
-
 ```
 
 Allocates and returns an array of strings obtained by splitting ’s’ using the character 'c' as a delimiter. The array must end
@@ -120,7 +117,6 @@ Allocates and returns a string representing the integer received as an argument.
 
 ```
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
-
 ```
 
 Applies the function 'f' to each character of the string ’s’, and passing its index as first argument to create a new string resulting from successive applications of ’f’.
@@ -135,7 +131,6 @@ Applies the function 'f' to each character of the string ’s’, and passing it
 
 ```
 void ft_striteri(char *s, void (*f)(unsigned int, char*));
-
 ```
 Applies the function 'f' on each character of the string passed as argument, passing its index as first argument. Each character is passed by address to ’f’ to be modified if necessary.
 
@@ -149,7 +144,6 @@ Applies the function 'f' on each character of the string passed as argument, pas
 
 ```
 void ft_putchar_fd(char c, int fd);
-
 ```
 
 Outputs the character 'c' to the given file descriptor.
@@ -164,7 +158,6 @@ Outputs the character 'c' to the given file descriptor.
 
 ```
 void ft_putstr_fd(char *s, int fd);
-
 ```
 
 Outputs the string 's' to the given file descriptor.
@@ -179,7 +172,6 @@ Outputs the string 's' to the given file descriptor.
 
 ```
 void ft_putendl_fd(char *s, int fd);
-
 ```
 
 Outputs the string 's' to the given file descriptor followed by a newline.
@@ -193,7 +185,6 @@ Outputs the string 's' to the given file descriptor followed by a newline.
 
 ```
 void ft_putnbr_fd(int n, int fd);
-
 ```
 
 Outputs the integer 'n' to the given file descriptor.
@@ -212,7 +203,6 @@ The functions created in the bonus section serve as an introduction to linked li
 
 ```
 t_list *ft_lstnew(void *content);
-
 ```
 
 Allocates (with malloc(3)) and returns a new node. The member variable 'content' is initialized with the value of the parameter 'content'. The variable 'next' is initialized to NULL.
@@ -225,7 +215,6 @@ Allocates (with malloc(3)) and returns a new node. The member variable 'content'
 
 ```
 void ft_lstadd_front(t_list **lst, t_list *new);
-
 ```
 
 Adds the node 'new' at the beginning of the list.
@@ -239,7 +228,6 @@ Adds the node 'new' at the beginning of the list.
 
 ```
 void ft_lstadd_front(t_list **lst, t_list *new);
-
 ```
 
 Counts the number of nodes in a list.
@@ -252,7 +240,6 @@ Counts the number of nodes in a list.
 
 ```
 t_list *ft_lstlast(t_list *lst);
-
 ```
 
 Returns the last node of the list.
@@ -265,7 +252,6 @@ Returns the last node of the list.
 
 ```
 void ft_lstadd_back(t_list **lst, t_list *new);
-
 ```
 
 Adds the node 'new' at the end of the list.
@@ -279,7 +265,6 @@ Adds the node 'new' at the end of the list.
 
 ```
 void ft_lstdelone(t_list *lst, void (*del)(void*));
-
 ```
 
 Takes as a parameter a node and frees the memory of the node’s content using the function 'del' given as a parameter and free the node. The memory of 'next' must not be freed.
@@ -293,7 +278,6 @@ Takes as a parameter a node and frees the memory of the node’s content using t
 
 ```
 void ft_lstclear(t_list **lst, void (*del)(void*));
-
 ```
 
 Deletes and frees the given node and every successor of that node, using the function ’del’ and free(3). Finally, the pointer to the list must be set to NULL.
@@ -308,7 +292,6 @@ Deletes and frees the given node and every successor of that node, using the fun
 
 ```
 void ft_lstiter(t_list *lst, void (*f)(void *));
-
 ```
 
 Iterates the list 'lst' and applies the function 'f' on the content of each node.
@@ -322,7 +305,6 @@ Iterates the list 'lst' and applies the function 'f' on the content of each node
 
 ```
 t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-
 ```
 
 Iterates the list 'lst' and applies the function 'f' on the content of each node. Creates a new list resulting of the successive applications of the function 'f'. The 'del' function is used to delete the content of a node if needed.
